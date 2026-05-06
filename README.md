@@ -1,71 +1,229 @@
-# NFL Play-by-Play Analysis using Python and LLMs
+# NFL Play-by-Play LLM Analysis
 
-This project explores whether a Large Language Model (LLM) combined with Retrieval-Augmented Generation (RAG) can produce useful NFL scouting insights from play-by-play data.
+## Comparing Deterministic Football Analytics with LLM + RAG Systems
 
-The system compares a deterministic Python analysis pipeline with an LLM-based question-answering system.
+This project explores the use of Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) for NFL game analysis using play-by-play football data.
+
+The project compares a traditional deterministic Python-based analytics pipeline with a Generative AI system powered by GPT-4o to evaluate whether LLMs can generate meaningful football insights from structured game data.
+
+The analysis primarily focuses on the Baltimore Ravens and investigates how AI can support football strategy analysis, trend identification, and natural language insight generation.
+
+---
 
 ## Project Goal
 
-Traditional football scouting requires manually analyzing large amounts of play-by-play data. This project investigates whether an LLM-assisted system can quickly summarize opponent tendencies and generate strategic insights.
+Traditional sports analytics pipelines rely on deterministic statistical calculations and manually engineered analysis workflows.
 
-## Two System Approaches
+This project explores whether Generative AI systems can:
+- Interpret structured NFL play-by-play data
+- Generate strategic football insights
+- Summarize game trends in natural language
+- Support decision-making through contextual analysis
 
-### 1. Python Deterministic System
-A traditional data analysis pipeline that computes exact statistics such as:
+The goal is to compare the strengths and limitations of:
+1. Deterministic Python analytics
+2. LLM-based RAG analysis pipelines
 
-- run vs pass tendencies
-- player usage
-- formation frequency
-- down-and-distance behavior
-- situational tendencies
+---
 
-### 2. LLM + RAG System
-A retrieval-augmented generation system that:
+## Business Value
 
-1. chunks play-by-play data
-2. embeds the text
-3. retrieves relevant plays
-4. generates natural-language insights
+Sports organizations increasingly rely on data-driven decision-making for:
+- Player evaluation
+- Opponent scouting
+- Game strategy
+- Performance analysis
+- Fan engagement
 
-This allows users to ask questions such as:
+This project demonstrates how Retrieval-Augmented Generation (RAG) can support sports analytics workflows by transforming structured football data into human-readable strategic insights.
 
-- "What are the Ravens' most common plays on 3rd and short?"
-- "Which players are most targeted in the red zone?"
-- "What tendencies appear in two-minute offense?"
+Potential applications include:
+- Automated game summaries
+- Coaching support tools
+- AI-assisted scouting analysis
+- Fan-facing analytics platforms
+- Natural language sports reporting
 
-## Evaluation
+---
 
-Both systems were evaluated on:
+## Data Sources
 
-- Accuracy
-- Completeness
-- Specificity
-- Response usefulness
-- Speed
+The project uses NFL play-by-play data containing:
+- Offensive and defensive plays
+- Passing and rushing statistics
+- Drive information
+- Game situations
+- Scoring outcomes
+- Team and player performance metrics
 
-The deterministic Python system provided more reliable exact counts, while the LLM system was better at generating quick strategic summaries.
+The analysis primarily focused on:
+- Baltimore Ravens offensive performance
+- Situational play analysis
+- Game trend identification
+- Comparative football insights
 
-## Key Findings
+---
 
-The best approach is **not replacing traditional analytics with LLMs**, but combining both.
+## System Design
 
-Python provides precise statistical grounding, while LLMs improve usability and exploratory analysis.
+The project compares two analytical approaches:
 
-## Limitations
+### 1. Deterministic Analytics Pipeline
+A traditional Python-based system using statistical analysis and filtering logic to generate football insights.
 
-- Limited dataset scope
-- Potential hallucinations in LLM responses
-- Token/context limits
-- Play-by-play data lacks full contextual game information
+### 2. LLM + RAG Pipeline
+A Generative AI workflow using GPT-4o and contextual retrieval to generate natural language football analysis from structured data.
 
-## Tech Stack
+---
+
+## System Workflow
+
+```text
+NFL Play-by-Play Data
+          ↓
+Data Cleaning & Preprocessing
+          ↓
+Feature Extraction & Statistical Analysis
+          ↓
+Deterministic Analysis Pipeline
+          ↓
+LLM + RAG Prompt Construction
+          ↓
+GPT-4o Insight Generation
+          ↓
+Football Strategy Analysis
+```
+
+---
+
+## Key Research Question
+
+Can Generative AI systems produce meaningful football strategy insights comparable to traditional deterministic analytics pipelines?
+
+This project evaluates:
+- Insight quality
+- Contextual relevance
+- Natural language interpretation
+- Strategic usefulness
+- Flexibility of LLM-generated analysis
+
+---
+
+## Example Analytical Tasks
+
+The system was used to:
+- Analyze offensive tendencies
+- Evaluate passing and rushing performance
+- Identify situational trends
+- Summarize team performance
+- Generate football strategy observations
+- Compare AI-generated insights with deterministic outputs
+
+---
+
+## Key Insight
+
+The LLM + RAG system demonstrated strong capabilities in:
+- Natural language summarization
+- Contextual interpretation
+- Flexible football insight generation
+- Human-readable analysis
+
+However, deterministic systems remained stronger for:
+- Exact statistical calculations
+- Reproducibility
+- Precision analytics
+- Structured metric evaluation
+
+The comparison highlighted how traditional analytics and Generative AI systems can complement each other in sports analytics workflows.
+
+---
+
+## Skills Demonstrated
+
+- Retrieval-Augmented Generation (RAG)
+- Prompt Engineering
+- Sports Analytics
+- NLP Workflows
+- Data Cleaning & Preprocessing
+- Statistical Football Analysis
+- Generative AI Applications
+- LLM-Based Insight Generation
+- Python Data Analysis
+
+---
+
+## Technologies Used
 
 - Python
 - Pandas
-- Scikit-Learn
-- Sentence Transformers
+- NumPy
+- Jupyter Notebook
+- OpenAI GPT-4o
 - LangChain
 - Retrieval-Augmented Generation (RAG)
-- Jupyter Notebooks
+- NFL Play-by-Play Data
+
+---
 
 ## Repository Structure
+
+```text
+nfl-play-by-play-llm-analysis/
+│
+├── notebooks/
+│   └── Jupyter notebooks for deterministic analysis and LLM/RAG experimentation
+│
+├── presentation/
+│   └── Final project presentation materials
+│
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Future Improvements
+
+- Integrate vector databases for semantic retrieval
+- Expand analysis to additional NFL teams
+- Add real-time game ingestion
+- Build an interactive sports analytics dashboard
+- Add advanced statistical modeling
+- Integrate player-level embedding retrieval
+- Deploy as an AI-assisted football analytics platform
+
+---
+
+## Limitations
+
+The project focused on a limited set of NFL play-by-play scenarios and primarily evaluated proof-of-concept RAG workflows.
+
+The LLM system relied on prompt engineering and contextual data injection rather than advanced fine-tuning or large-scale semantic retrieval systems.
+
+Future work could improve:
+- Retrieval precision
+- Real-time data integration
+- Multi-game contextual memory
+- Advanced vector similarity search
+
+---
+
+## Presentation Materials
+
+Project presentation slides and supporting materials are included in the `/presentation` directory.
+
+---
+
+## Author
+
+Christine Whelan  
+MS in Artificial Intelligence
